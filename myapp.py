@@ -5,7 +5,7 @@ import time
 app = Flask(__name__)
 app.debug = True
 
-@app.route('/xiaohui')
+@app.route('/')
 def hello():
     return "Hello, world! - Flask- xiaohui"
 
