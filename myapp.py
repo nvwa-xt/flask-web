@@ -33,3 +33,6 @@ def index():
     user_agent = request.headers.get('User-Agent')
     return '<p>Your browser is %s</p>' % user_agent
 
+@app.route('/test')
+def index():
+    return render_template('index.html')
