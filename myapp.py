@@ -12,8 +12,8 @@ def hello():
 @app.route('/wx', methods = ['GET', 'POST'] )  
 def wechat_auth():  
     if request.method == 'GET':  
-        token = 'aomeng12348765' # your token  
-        query = request.args  # GET 方法附上的参数  
+        token = 'aomeng12348765'   
+        query = request.args  
         signature = query.get('signature', '')  
         timestamp = query.get('timestamp', '')  
         nonce = query.get('nonce', '')  
