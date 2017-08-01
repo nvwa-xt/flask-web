@@ -26,13 +26,14 @@ def wechat_auth():
 
 @app.route('/user/<name>')
 def user(name):
-    return '<h1>Hello, %s!</h1>' % name
+    #return '<h1>Hello, %s!</h1>' % name
+    return render_template('user.html',name=name)
 
-@app.route('/')
+@app.route('/browser')
 def index():
     user_agent = request.headers.get('User-Agent')
     return '<p>Your browser is %s</p>' % user_agent
 
-@app.route('/test')
+@app.route('/')
 def index():
     return render_template('index.html')
