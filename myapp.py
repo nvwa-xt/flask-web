@@ -29,10 +29,10 @@ def user(name):
     #return '<h1>Hello, %s!</h1>' % name
     return render_template('user.html',name=name)
 
-@app.route('/browser')
+@app.route('/test')
 def index():
     user_agent = request.headers.get('User-Agent')
-    return '<p>Your browser is %s</p>' % user_agent
+    return render_template('browser.html',user_agent=user_agent)    
 
 @app.route('/')
 def index():
