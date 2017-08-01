@@ -30,7 +30,7 @@ def user(name):
     return render_template('user.html',name=name)
 
 @app.route('/test')
-def index():
+def test():
     user_agent = request.headers.get('User-Agent')
     return render_template('browser.html',user_agent=user_agent)    
 
