@@ -9,7 +9,7 @@ app.debug = True
 def hello():
     return "Hello, world! - Flask- xiaohui"
 
-@app.route('/', methods = ['GET', 'POST'] )  
+@app.route('/wx', methods = ['GET', 'POST'] )  
 def wechat_auth():  
   if request.method == 'GET':  
     token = 'aomeng12348765' # your token  
