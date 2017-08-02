@@ -8,6 +8,13 @@
         <link rel="stylesheet" href="/static/semantic.css" media="screen" title="no title" charset="utf-8">
 	<script src="/static/semantic.js"></script>
 	<script src="http://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+	  $("#hide").click(function(){
+	  $("p").hide();
+	  });
+	});
+	</script >
     </head>
     
     <body>
@@ -35,7 +42,7 @@
                     Classes use syntax from natural languages like noun/modifier relationships,
                     word order, and plurality to link concepts intuitively.
                 </p>
-                <button type="button" name="button" class="ui button">
+                <button id="hide" type="button" name="button" class="ui button">
                     Read more
                 </button>
             </div>
