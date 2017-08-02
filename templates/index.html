@@ -19,6 +19,11 @@
 	  $("#more").click(function(){
 	  $("h1").toggle();
 	  });
+  	  $("button").click(function(){
+          $("#div1").fadeTo("slow",0.15);
+          $("#div2").fadeTo("slow",0.4);
+          $("#div3").fadeTo("slow",0.7);
+          });
 	});
 	</script >
     </head>
@@ -30,15 +35,16 @@
         <p>
             我也一样！
         </p>
-        <div class="ui inverted red segment">
+        <div id="dev1" class="ui inverted red segment">
             test12
         </div>
-        <div class="ui inverted blue segment">
+        <div id="dev2" class="ui inverted blue segment">
             test23
         </div>
-        <div class="ui inverted segment">
+        <div id="dev3" class="ui inverted segment">
             test34
         </div>
+	<button>点击这里，使三个矩形淡出</button>
         <div class="ui vertical segment">
             <div class="ui container segment">
                 <h1 class="ui header">
