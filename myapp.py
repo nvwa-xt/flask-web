@@ -24,8 +24,9 @@ def wechat_auth():
         if ( hashlib.sha1(s).hexdigest() == signature ):    
             return make_response(echostr) 
 
+@app.route('/user/')
 @app.route('/user/<name>')
-def user(name):
+def user(name=None):
     #return '<h1>Hello, %s!</h1>' % name
     return render_template('user.html',name=name)
 
