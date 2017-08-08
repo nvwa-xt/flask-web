@@ -1,13 +1,11 @@
+#encoding: utf-8
+
 from flask import Flask,request,make_response,render_template  
 import hashlib 
 import time
 
 app = Flask(__name__)
 app.debug = True
-
-@app.route('/xiaohui')
-def hello():
-    return "Hello, world! - Flask- xiaohui"
 
 @app.route('/wx', methods = ['GET', 'POST'] )  
 def wechat_auth():  
@@ -23,17 +21,6 @@ def wechat_auth():
         s = ''.join(s)  
         if ( hashlib.sha1(s).hexdigest() == signature ):    
             return make_response(echostr) 
-
-@app.route('/user/')
-@app.route('/user/<name>')
-def user(name=None):
-    #return '<h1>Hello, %s!</h1>' % name
-    return render_template('user.html',name=name)
-
-@app.route('/test')
-def test():
-    user_agent = request.headers.get('User-Agent')
-    return render_template('browser.html',user_agent=user_agent)    
 
 @app.route('/')
 def index():
