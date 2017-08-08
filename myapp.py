@@ -26,6 +26,10 @@ def wechat_auth():
 def index():
     return render_template('index.html')
 
+@app.route('/solux')
+def solux():
+    return render_template('solux.html')
+
 @app.route('/love')
 def love():
     return render_template('love.html')
