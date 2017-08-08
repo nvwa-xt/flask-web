@@ -29,3 +29,7 @@ def index():
 @app.route('/love')
 def love():
     return render_template('love.html')
+
+@app.route('/login')
+def login():
+    return render_template('login.html')
