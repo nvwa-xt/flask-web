@@ -37,3 +37,8 @@ def love():
 @app.route('/login')
 def login():
     return render_template('login.html')
+
+@app.route('/xh')
+def game():
+    return render_template('xh.html')
+
